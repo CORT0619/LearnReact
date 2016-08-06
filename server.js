@@ -4,6 +4,9 @@ var bodyParser = require('body-parser');
 var logger = require('morgan');
 var mongojs = require('mongojs');
 
+var helpers = require('./app/Components/utils/helpers.js');
+
+
 var app = express();
 var PORT = process.env.PORT || 3000;
 
@@ -35,6 +38,16 @@ app.get('/', function(req, res){
 	res.sendFile('./public/index.html');
 });
 
+app.post('/appdata', function(req, res){
+
+	var results = helpers.runQuery();
+
+	console.log("results ", results);
+
+	//db.learnReact.
+
+
+});
 
 
 

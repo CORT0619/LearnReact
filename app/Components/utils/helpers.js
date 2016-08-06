@@ -19,7 +19,18 @@ var helpers = {
 
 				console.log(response);
 				return response.data.results[0].formatted;
+
 		})
+
+	},
+
+	sendToDB: function(data){
+
+		return axios.get('/appdata')
+			.then(function(response){
+
+				
+		});
 
 	}
 

@@ -19745,6 +19745,7 @@
 				console.log("UPDATED");
 
 				helpers.runQuery(this.state.searchTerm).then(function (data) {
+
 					if (data != this.state.results) {
 						console.log("HERE");
 						console.log(data);
@@ -19974,6 +19975,11 @@
 				console.log(response);
 				return response.data.results[0].formatted;
 			});
+		},
+
+		sendToDB: function sendToDB(data) {
+
+			return axios.get('/appdata').then(function (response) {});
 		}
 
 	};

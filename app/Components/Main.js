@@ -34,6 +34,8 @@ var Main = React.createClass({
 
 			helpers.runQuery(this.state.searchTerm)
 				.then(function(data){
+
+					
 					if (data != this.state.results)
 					{
 						console.log("HERE");
