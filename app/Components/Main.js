@@ -35,7 +35,7 @@ var Main = React.createClass({
 			helpers.runQuery(this.state.searchTerm)
 				.then(function(data){
 
-					helpers.sendToDB(data);
+					helpers.sendToDB(this.state.searchTerm);
 
 
 					if (data != this.state.results)
