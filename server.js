@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var logger = require('morgan');
 var mongojs = require('mongojs');
 
-var = express();
+var app = express();
 var PORT = process.env.PORT || 3000;
 
 app.use(logger('dev'));
@@ -34,6 +34,8 @@ db.on('error', function(err){
 app.get('/', function(req, res){
 	res.sendFile('./public/index.html');
 });
+
+
 
 
 // Listener
