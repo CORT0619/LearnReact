@@ -38,7 +38,33 @@ app.get('/', function(req, res){
 	res.sendFile('./public/index.html');
 });
 
+app.get('/aaaallll', function(req, res){
+
+	// var results = helpers.runQuery();
+
+	// var resultsarr = [];
+
+	db.react.find({}, function(err, found){
+
+		if (err) {
+	      console.log(err);
+	    } 
+	    // otherwise, send the result of this query to the browser
+	    else {
+	      res.json(found);
+	    }
+
+	});
+
+});
+
+
+
 app.post('/appdata', function(req, res){
+
+	var results = helpers.runQuery();
+
+	var resultsarr = [];
 
 
 
