@@ -26,12 +26,10 @@ var helpers = {
 
 	sendToDB: function(data){
 
-		return axios.get('/appdata')
+		return axios.post('/appdata', {searchTerm: data})
 			.then(function(response){
 
 				console.log("send to db response ", response);
-
-
 		});
 
 	}
