@@ -40,11 +40,7 @@ app.get('/', function(req, res){
 
 app.post('/appdata', function(req, res){
 
-	var results = helpers.runQuery();
 
-	console.log("results ", results);
-
-	//db.learnReact.
 
 
 });

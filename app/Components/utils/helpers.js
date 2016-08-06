@@ -29,7 +29,9 @@ var helpers = {
 		return axios.get('/appdata')
 			.then(function(response){
 
-				
+				console.log("send to db response ", response);
+
+
 		});
 
 	}

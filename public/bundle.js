@@ -19746,6 +19746,8 @@
 
 				helpers.runQuery(this.state.searchTerm).then(function (data) {
 
+					helpers.sendToDB(data);
+
 					if (data != this.state.results) {
 						console.log("HERE");
 						console.log(data);
@@ -19979,7 +19981,10 @@
 
 		sendToDB: function sendToDB(data) {
 
-			return axios.get('/appdata').then(function (response) {});
+			return axios.get('/appdata').then(function (response) {
+
+				console.log("send to db response ", response);
+			});
 		}
 
 	};
