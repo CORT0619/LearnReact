@@ -22,11 +22,21 @@ var collections = ["learnReact"];
 var db = mongojs(databaseUrl, collections);
 
 db.on('error', function(err){
-	console.log('MongoDB Error: ', err);
+
+	if(err)
+		throw err;
+
+	console.log('Connected to DB');
 });
 
 
 // routes
 app.get('/', function(req, res){
 	res.sendFile('./public/index.html');
+});
+
+
+// Listener
+app.listen(PORT, function() {
+  console.log("App listening on PORT: " + PORT);
 });
